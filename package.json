@@ -1,0 +1,10 @@
+{
+  "name": "Projeto-Node-NLW5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "abnerlourenco <abner2010_hm@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
