@@ -13,11 +13,11 @@ class UsersService {
 
     //Select * from users where email = "email" limit 1;
     const userExists = await usersRepository.findOne({
-      email
+      email,
     });
 
     if(userExists) {
-      throw new Error("Email has already been signed!!")
+     return userExists;
     }
     const user = usersRepository.create({
       email,
