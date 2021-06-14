@@ -1,11 +1,11 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class CreateSettings1623440732029 implements MigrationInterface {
+export class CreateUsers1623685570420 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "settings",
+                name: "users",
                 columns: [
                     {
                         name: "id",
@@ -13,32 +13,21 @@ export class CreateSettings1623440732029 implements MigrationInterface {
                         isPrimary: true,
                     },
                     {
-                        name: "username",
+                        name: "email",
                         type: "varchar",
-                    },
-                    {
-                        name: "chat",
-                        type: "boolean",
-                        default: true,
-                    },
-                    {
-                        name: "updated_at",
-                        type: "timestamp",
-                        default: "now()",
                     },
                     {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()",
-                    },
-                ],
+                    }
+                ]
             })
         )
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("settings");
+        await queryRunner.dropTable("users");
     }
-
 
 }
