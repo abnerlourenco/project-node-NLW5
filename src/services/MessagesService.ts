@@ -27,7 +27,10 @@ class MessagesService {
     const messagesRepository = getCustomRepository(MessagesRepository);
 
     const list = await messagesRepository.find({
-      user_id,
+      // usado para trazer informações relacionadas ao usuário;
+      // tomar cuidado para nao sobre carregar o nossa requisição;
+      where: {user_id},
+      relations: ["user"],
     });
 
     return list;
