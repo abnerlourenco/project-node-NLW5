@@ -31,11 +31,11 @@ class Message {
   @CreateDateColumn()
   created_at: Date;
 
-  constructor() {
-    if(!this) {
+  constructor(){
+    if(!this.id) {
       this.id = uuid();
     }
   }
 }
 
-export { Message}
+export { Message }

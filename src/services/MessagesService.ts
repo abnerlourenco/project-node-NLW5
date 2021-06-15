@@ -16,7 +16,7 @@ class MessagesService {
       admin_id,
       text,
       user_id,
-    })
+    });
 
     await messagesRepository.save(message);
 
@@ -24,4 +24,4 @@ class MessagesService {
   }
 }
 
-export { MessagesService }
+export { MessagesService };

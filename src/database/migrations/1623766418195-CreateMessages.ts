@@ -13,7 +13,7 @@ export class CreateMessages1623766418195 implements MigrationInterface {
                         isPrimary: true,
                     },
                     {
-                        name: "Admin_id",
+                        name: "admin_id",
                         type: "uuid",
                         isNullable: true,
                     },
