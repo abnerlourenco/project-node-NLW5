@@ -7,6 +7,7 @@ html {
 
 body {
   background: #ffffff;
+  overflow-y: scroll;
 }
 
 .btn_support {
@@ -67,7 +68,8 @@ body {
 .chat_support {
   position: absolute;
   max-width: 330px;
-  right: 10px;
+  right: 145px;
+  bottom: 65px;
   animation: up 1s;
 }
 
@@ -78,10 +80,10 @@ body {
 
 @keyframes up {
   from {
-    transform: translateY(60vh);
+    transform: translateY(50vh);
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
