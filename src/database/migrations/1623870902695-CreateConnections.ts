@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import {MigrationInterface, QueryRunner, Table, TableForeignKey} from "typeorm";
+=======
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
+>>>>>>> 562e04ec4c7cb8e57121272373ca3d6c45258adb
 
 export class CreateConnections1623870902695 implements MigrationInterface {
 
@@ -38,6 +42,7 @@ export class CreateConnections1623870902695 implements MigrationInterface {
                 ],
             }),
         );
+<<<<<<< HEAD
 
         await queryRunner.createForeignKey(
             "connections",
@@ -54,6 +59,11 @@ export class CreateConnections1623870902695 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropForeignKey("connections", "FKConnectionUser");
+=======
+    }
+
+    public async down(queryRunner: QueryRunner): Promise<void> {
+>>>>>>> 562e04ec4c7cb8e57121272373ca3d6c45258adb
         await queryRunner.dropTable("connections");
     }
 
