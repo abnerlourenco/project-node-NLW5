@@ -2,7 +2,9 @@ import { getCustomRepository, Repository } from "typeorm";
 import { User } from "../entities/Users";
 import { UsersRepository } from "../repositories/UsersRepository";
 
-
+interface IUserCreate {
+  email: string;
+}
 
 class UsersService {
   private usersRepository: Repository<User>;
@@ -10,7 +12,7 @@ class UsersService {
   constructor() {
     this.usersRepository = getCustomRepository(UsersRepository);
   }
-  async create(email: string) {
+  async create({ email }: IUserCreate) {
     // Verificar se o usuario existe
     // Caso nao exista, salvar no Banco de Dados
     // Se já existir, retornar o user.
