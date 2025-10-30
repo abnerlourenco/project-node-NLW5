@@ -13,10 +13,14 @@ app.set("views", path.join(__dirname, "..", "public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
-//criando uam rota de teste
+//criando uma rota de teste
 app.get("/pages/client", (request, response) => {
   return response.render("html/client.html");
 })
+
+app.get("/pages/admin", (request, response) => {
+  return response.render("html/admin.html");
+});
 
 // criando protocolo http
 const http = createServer(app); 

@@ -28,7 +28,7 @@ class MessagesService {
     return message;
   }
 
-  async ListByUser(user_id: string) {
+  async listByUser(user_id: string) {
     const list = await this.messagesRepository.find({
       // usado para trazer informações relacionadas ao usuário;
       // tomar cuidado para nao sobre carregar o nossa requisição;

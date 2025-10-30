@@ -32,6 +32,4 @@ class Setting {
   }
 }
 
-
 export { Setting }
-
